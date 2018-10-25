@@ -1,0 +1,15 @@
+server:
+  port: 80
+logging:
+  level:
+    root: info
+    io.noganova.samk8sspringboot: debug
+  pattern:
+    dateformat: HH:mm:ss.SSS
+spring:
+  output:
+    ansi:
+      enabled: always    
+  profiles:
+    include:
+    - db
