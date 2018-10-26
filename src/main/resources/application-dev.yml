@@ -13,3 +13,4 @@ spring:
   profiles:
     include:
     - db
+    - api

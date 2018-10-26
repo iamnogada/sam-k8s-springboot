@@ -14,10 +14,12 @@ public class GreetingController {
 
     @Value("${application.name}")
     String appName;
+    @Value("${application.apiname}")
+    String apiName;
 
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name",required=false,defaultValue="world")String name, Model map){
-        map.addAttribute("name",appName);
+        map.addAttribute("name",appName +":"+apiName);
         return "greeting";
     }
 }
