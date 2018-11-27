@@ -17,6 +17,20 @@ spec:
       containers:
       - name: sam-spring-app
         image: myguddy/sam-k8s-player
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          valueFrom:
+            configMapKeyRef:
+              name: spring-properties
+              key: active-profile
         ports:
         - name: tomcat
           containerPort: 8080
+        volumeMounts:
+        - name: spring-properties
+          mountPath: /config
+      volumes:
+      - name: spring-properties
+        configMap:
+          name: spring-properties
+        

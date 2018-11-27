@@ -4,7 +4,7 @@ metadata:
   name: app01-ingress
 spec:
   rules:
-  - host: app01.nogada.dev
+  - host: app01.nogada.io
     http:
       paths:
       - path: /
