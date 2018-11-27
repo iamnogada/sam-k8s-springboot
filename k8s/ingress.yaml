@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app01-ingress
+spec:
+  rules:
+  - host: app01.nogada.dev
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sam-k8s-player
+          servicePort: http

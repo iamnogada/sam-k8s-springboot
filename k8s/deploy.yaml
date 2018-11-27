@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sam-k8s-player
+  labels:
+    deploy: springboot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot
+  template:
+    metadata:
+      labels:
+        app: springboot
+    spec:
+      containers:
+      - name: sam-spring-app
+        image: myguddy/sam-k8s-player
+        ports:
+        - name: tomcat
+          containerPort: 8080

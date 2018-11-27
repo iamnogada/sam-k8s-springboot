@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sam-k8s-player
+spec:
+  selector:
+    app: springboot
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: tomcat
