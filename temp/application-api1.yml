@@ -1,0 +1,3 @@
+application:
+  apiname: "apv-fighting"
+  location: /config/api

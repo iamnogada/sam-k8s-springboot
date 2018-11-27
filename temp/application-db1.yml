@@ -1,0 +1,3 @@
+application:
+  name: myservice_filepath
+  location: /config/db

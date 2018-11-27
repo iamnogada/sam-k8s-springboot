@@ -1,0 +1,19 @@
+server:
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+  use-forward-headers: true
+logging:
+  level:
+    root: info
+    io.noganova.samk8sspringboot: debug
+  pattern:
+    dateformat: HH:mm:ss.SSS
+spring:
+  output:
+    ansi:
+      enabled: always
+
+application:
+  comkey01: config
+  profilekey03: config

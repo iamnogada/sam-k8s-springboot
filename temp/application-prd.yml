@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    include:
+    - api
+    - db
+---
+application:
+  name: myservice_filepath
+  location: /resource/prd

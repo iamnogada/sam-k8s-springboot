@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: spring-properties
 data:
-  active-profile: prd
+  active-profile: prd,stg
   application.yaml: |-
     server:
       tomcat:
